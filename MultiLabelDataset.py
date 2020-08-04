@@ -14,6 +14,9 @@ class MultiLabelDataset(Dataset):
         """
         csv_file（string）：带注释的csv文件的路径。
         root_dir（string）：包含所有图像的目录。
+        num_classes （int）：类型数量
+        begin （int）：第一个开始的类数字表示，通常为0或1
+        comma_separated （bool）：是否使用“，”进行多标签分隔
         transform（callable， optional）：一个样本上的可用的可选变换
         """
         self.landmarks_frame = pd.read_csv(csv_file)
